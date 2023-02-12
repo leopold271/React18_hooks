@@ -1,10 +1,17 @@
 import './App.css';
+import TransitionExample from './examples/useTransition';
+import DefferedValueExample from './examples/useDefferedValue';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      asd
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route element={<DefferedValueExample/>} path="def"/>
+      <Route element={<TransitionExample/>} path="trans" />
+    </Routes>
+    </BrowserRouter>
+
   );
 }
 
